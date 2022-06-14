@@ -27,6 +27,8 @@
                 </div>
         </nav>
 
+
+
     <!--center container-->
 
     <div class="container">
@@ -34,6 +36,9 @@
         <div class="row justify-content-center">
             <div class="col-md-auto">
                 <div id="map"></div>
+                <div class="arrow-container">
+                    <img class="original" src="Images/left-arrow.png">
+                </div>
             </div>
           </div>
           <div class="row">
@@ -67,7 +72,33 @@
 
     </footer>
     
-    
+    <script>
+        var els = document.querySelectorAll("[class*= photos-preview]");
+        els[0].setAttribute("style", "display:block");
+        var index = 0;
+        function GetNext()
+        {
+            for (var i = 0; i < els.length; i++) {
+                els[i].setAttribute("style", "display:none");
+            }
+            index++;
+            if (index == els.length) {
+                index = 0;
+            }
+            els[index].setAttribute("style", "display:block");
+        }
+
+        function GetPrev() {
+            for (var i = 0; i < els.length; i++) {
+                els[i].setAttribute("style", "display:none");
+            }
+            index--;
+            if (index < 0) {
+                index = els.length - 1;
+            }
+            els[index].setAttribute("style", "display:block");
+        }
+    </script>
     
     
     
