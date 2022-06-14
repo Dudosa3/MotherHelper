@@ -26,9 +26,6 @@ var marker;
   navigator.geolocation.getCurrentPosition(GeolocateSuccess, GeolocateError);
     
 
-
- 
-
     function GeolocateError (error){console.warn(error.code, error.message);   
       if (error.code === 1) {    
         // they said no  
@@ -44,7 +41,7 @@ function getLocation()
   map.setCenter(new google.maps.LatLng(Number(userLocation.lat), Number(userLocation.lng)))
   map.setZoom(14)
   marker = new google.maps.Marker({
-    position:{lat: Number(userLocation.lat), lng: Number(userLocation.lng )},
+    position:{lat: Number(userLocation.lat)},
     map:map,
 });
 
@@ -58,17 +55,16 @@ function initMap() {
         zoom: defaultLocation.zoom,
       });
 
-    map.setCenter(new google.maps.LatLng(Number(defaultLocation.lat), Number(defaultLocation.lng)))
+      map.setCenter(new google.maps.LatLng(Number(defaultLocation.lat), Number(defaultLocation.lng)))
+
 
     //marker
-   
    
         marker = new google.maps.Marker({
             position:{lat: 50.0755, lng: 14.4378 },
             map:map,
         });
 
-        
 
       }
      
