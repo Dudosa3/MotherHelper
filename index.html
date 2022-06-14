@@ -76,17 +76,7 @@
         var els = document.querySelectorAll("[class*= photos-preview]");
         els[0].setAttribute("style", "display:block");
         var index = 0;
-        function GetNext()
-        {
-            for (var i = 0; i < els.length; i++) {
-                els[i].setAttribute("style", "display:none");
-            }
-            index++;
-            if (index == els.length) {
-                index = 0;
-            }
-            els[index].setAttribute("style", "display:block");
-        }
+       
 
         function GetPrev() {
             for (var i = 0; i < els.length; i++) {

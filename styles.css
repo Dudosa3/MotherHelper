@@ -51,8 +51,7 @@ footer{
     width: 100%;
     
     opacity: 0.8; 
-    border-top-left-radius: 100px;
-    border-top-right-radius: 100px;
+    
 }
 
 .photos-container img {
@@ -145,15 +144,26 @@ figure {
         border-radius: 4px 4px 0 0;
     }
 
-    .custom-option:last-of-type {
-        border-bottom: 0;
-        border-radius: 0 0 4px 4px;
+    .track-name {
+        font-size: 0.8em;
+        float:right;
+        margin-right: 50%;
     }
+    
+    .center {
+        text-align: center;
+    }
+    
 
     .custom-option:hover,
     .custom-option.selection {
         background: #f2f0f0;
     }
+    .custom-select {
+        position: relative;
+        display: inline-block;
+    }
+    
 
 /*Firefox Bug Fix*/
 .carousel-item {
@@ -164,7 +174,3 @@ transition: transform 0.5s ease, -webkit-transform 0.5s ease;
 backface-visibility: visible;
 }
 
-/*Bootstrap Padding Fix*/
-[class*="col-"] {
-  padding: 1rem;
-}
