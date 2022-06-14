@@ -42,9 +42,9 @@ function getLocation()
 {
   marker.setMap(null)
   map.setCenter(new google.maps.LatLng(Number(userLocation.lat), Number(userLocation.lng)))
-  map.setZoom(16)
+  map.setZoom(14)
   marker = new google.maps.Marker({
-    position:{lat: Number(userLocation.lat)},
+    position:{lat: Number(userLocation.lat), lng: Number(userLocation.lng )},
     map:map,
 });
 
@@ -58,7 +58,8 @@ function initMap() {
         zoom: defaultLocation.zoom,
       });
 
-    
+    map.setCenter(new google.maps.LatLng(Number(defaultLocation.lat), Number(defaultLocation.lng)))
+
     //marker
    
    
