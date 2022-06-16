@@ -4,7 +4,7 @@ html,body{
     height:100%;
     width:100%;
     font-family: sans-serif;
-    color: rgb(170, 170, 170);
+    color: rgb(170, 170, 170) !important;
 
 
 }
@@ -50,7 +50,7 @@ footer{
 }
 .container div{
     font-size: 25px;
-    color: rgb(222, 128, 248);
+    color: rgb(255, 255, 255);
 
 }
 
